@@ -1,0 +1,26 @@
+* what
+  This is an implementation of a router for an http server.  This is
+  old work of mine (Raimon Grau) from 2013.
+
+  - It uses a home made radix trie implementation.
+  - It does too much copying of tables (I was starting with lua, and
+    deep into lisp, so the code is quit lispy)
+  - recursion, yay
+  - it detects collisions
+  - it gives more precedence to fixed strings rather than wildcards,
+    so '/foo/bar/baz' and '/foo/:bar/baz' do not conflict
+* who
+  - Raimon Grau <raimonster@gmail.com>.
+
+  - Annotations and some tips by Enrique Garcia Cota
+
+  - This is part of APITools project. the repo lived on at
+    https://github.com/APItools/router.lua/, but I wanted to have the
+    pristine initial code I wrote, with all good and bad aspects.  If
+    you want to use this code, check the official repo. It probably
+    improved. And it has an OOP interface.
+* when
+  2013
+
+* why
+  - The code was used in APITools project.
